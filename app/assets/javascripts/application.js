@@ -12,5 +12,10 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+//= require jquery/dist/jquery
+//= require bootstrap/dist/js/bootstrap.bundle
+//= require jquery.easing/jquery.easing
+//= require datatables.net-bs4/js/dataTables.bootstrap4
+//= require sb-admin-2
+//= require chart.js/dist/Chart.min
