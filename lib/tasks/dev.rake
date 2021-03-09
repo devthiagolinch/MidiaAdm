@@ -29,7 +29,7 @@ namespace :dev do
   desc "Adiciona outros users"
   task add_default_user: :environment do
     User.create!(
-      email: "admin@admin.com",
+      email: "user@user.com",
       password: DEFAULT_PASSWORD,
       password_confirmation: DEFAULT_PASSWORD
     )

@@ -2,12 +2,12 @@
 
 one:
   address: MyString
-  gender: MyString
-  birthdate: 2021-03-05
-  users: one
+  birthdate: 2021-03-09
+  cellphone: 1
+  user: one
 
 two:
   address: MyString
-  gender: MyString
-  birthdate: 2021-03-05
-  users: two
+  birthdate: 2021-03-09
+  cellphone: 1
+  user: two
