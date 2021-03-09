@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   namespace :admins_backoffice do
     get 'welcome/index'
     get 'users/index'
+    get 'profile', to: 'profile#edit'
+    patch 'profile', to: 'profile#update'
   end
   devise_for :users
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "site/welcome#index"
+  root to: "users_backoffice/welcome#index"
 end
