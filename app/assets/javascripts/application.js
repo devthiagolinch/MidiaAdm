@@ -17,5 +17,6 @@
 //= require bootstrap/dist/js/bootstrap.bundle
 //= require jquery.easing/jquery.easing
 //= require datatables.net-bs4/js/dataTables.bootstrap4
+//= require datatables.net/js/jquery.dataTables
 //= require sb-admin-2
 //= require chart.js/dist/Chart.min
