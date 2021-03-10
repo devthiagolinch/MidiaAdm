@@ -10,7 +10,7 @@ namespace :dev do
       show_spinner("Cadastrando outros administradores...") { %x(rails dev:add_others_admins) }
       show_spinner("Cadastrando o usuário padrão...") { %x(rails dev:add_default_user) }
       show_spinner("Cadastrando ooutros usuários...") { %x(rails dev:add_others_users) }
-      # show_spinner("Cadastrando assuntos padrões...") { %x(rails dev:add_subjects) }
+      show_spinner("Cadastrando Escala padrão...") { %x(rails dev:add_schedule) }
       # show_spinner("Cadastrando questões padrões...") { %x(rails dev:add_answers_and_questions) }
     else
       puts "Você não está em ambiente de desenvolvimento!"
@@ -53,6 +53,20 @@ namespace :dev do
         email: Faker::Internet.email,
         password: DEFAULT_PASSWORD,
         password_confirmation: DEFAULT_PASSWORD
+      )
+    end
+  end
+
+  desc "Adiciona o administrador padrão"
+  task add_schedule: :environment do
+    4.times do |i|
+      Schedule.create!(
+        day: Faker::Date.between(from: '2021-03-01', to: '2021-03-25'),
+        morning_tranmission: Faker::Name.name,
+        morning_files: Faker::Name.name,
+        night_transmission: Faker::Name.name,
+        night_files: Faker::Name.name,
+        night_sound: Faker::Name.name,
       )
     end
   end

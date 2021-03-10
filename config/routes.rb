@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  namespace :users_backoffice do
-    get 'user_profile/index'
-  end
   namespace :site do
     get 'welcome/index'
   end
   namespace :users_backoffice do
+    get 'user_profile/index'
     get 'welcome/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
   end
   namespace :admins_backoffice do
     get 'welcome/index'
-    get 'users/index'
+    get 'users_profile/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
+
+    resources :schedule
   end
   devise_for :users
   devise_for :admins

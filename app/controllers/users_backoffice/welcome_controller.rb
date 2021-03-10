@@ -2,6 +2,9 @@ class UsersBackoffice::WelcomeController < UsersBackofficeController
   before_action :set_user
     before_action :verify_password, only: [:update]
 
+    def index
+        @schedule = Schedule.all
+    end
     def edit
         @user.build_user_profile if @user.user_profile.blank?
     end

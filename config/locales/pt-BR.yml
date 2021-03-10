@@ -1,0 +1,6 @@
+"pt-BR":
+  Português: Português
+  Inglês: Inglês
+  Date:
+    formats:
+      date_month_year_concise: '%d.%m.%y'

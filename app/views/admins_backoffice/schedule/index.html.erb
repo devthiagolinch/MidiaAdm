@@ -1,0 +1,24 @@
+<div class="row">
+    <% @schedule.each do |sc| %>
+    <div class="col-sm-4">
+        <!-- Basic Card Example -->
+          <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <%= link_to edit_admins_backoffice_schedule_path(sc) do %>
+                  <%= l sc.day %>
+                <% end %>
+              </div>
+              <div class="card-body">
+                  <h4>Manhã</h4>
+                  <strong>Transmissão</strong> <h6><%= sc.morning_tranmission %></h6>
+                  <strong>Arquivos</strong> <h6><%= sc.morning_files %></h6>
+                  <hr>
+                  <h4>Noite</h4>
+                  <strong>Transmissão</strong> <h6><%= sc.night_transmission %></h6>
+                  <strong>Arquivos</strong> <h6><%= sc.night_files %></h6>
+                  <strong>Som</strong> <h6><%= sc.night_sound %></h6>
+              </div>
+          </div>
+    </div>
+    <% end %>
+</div>

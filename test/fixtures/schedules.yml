@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2021-03-10
+  morning_tranmission: MyString
+  morning_files: MyString
+  night_transmission: MyString
+  night_files: MyString
+  night_sound: MyString
+
+two:
+  day: 2021-03-10
+  morning_tranmission: MyString
+  morning_files: MyString
+  night_transmission: MyString
+  night_files: MyString
+  night_sound: MyString
