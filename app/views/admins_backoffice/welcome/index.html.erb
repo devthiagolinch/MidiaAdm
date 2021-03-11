@@ -9,7 +9,7 @@
           <h6 class="m-0 font-weight-bold text-primary">Lista de Membros</h6>
       </a>
       <!-- Card Content - Collapse -->
-      <div class="collapse show" id="collapseCardExample">
+      <div class="collapse hiden" id="collapseCardExample">
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -35,25 +35,26 @@
   </div>
 
   <div class="col-lg-6">
-    <% @schedule.each do |schedule| %>
-        <% if Date.tomorrow == schedule.day  %>
+        <!-- Collapsable Card Members -->
+        <div class="card shadow mb-4">
           <!-- Basic Card Example -->
-          <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <%= l schedule.day %>
-              </div>
-              <div class="card-body">
-                  <h4>Manhã</h4>
-                  <strong>Transmissão</strong> <h6><%= schedule.morning_tranmission %></h6>
-                  <strong>Arquivos</strong> <h6><%= schedule.morning_files %></h6>
-                  <hr>
-                  <h4>Noite</h4>
-                  <strong>Transmissão</strong> <h6><%= schedule.night_transmission %></h6>
-                  <strong>Arquivos</strong> <h6><%= schedule.night_files %></h6>
-                  <strong>Som</strong> <h6><%= schedule.night_sound %></h6>
-              </div>
-          </div>
-        <% end %>
-    <% end %>
+            <% @schedule.each do |schedule| %>
+            <div class="  mb-4">
+                <div class="card-body border-bottom-info">
+                        <strong> <%= l schedule.day %> </strong>
+                    <p>
+                        <h5>Manhã</h5>
+                    <strong>Transmissão</strong> <%= schedule.morning_tranmission %>
+                    <strong>Arquivos</strong> <%= schedule.morning_files %>
+                    <hr>
+                    <h5>Noite</h5>
+                    <strong>Transmissão</strong> <%= schedule.night_transmission %>
+                    <strong>Arquivos</strong> <%= schedule.night_files %>
+                    <strong>Som</strong> <%= schedule.night_sound %>
+                    </p>
+                </div>
+            </div>
+            <% end %>
+        </div>
   </div>
 </div>

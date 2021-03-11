@@ -41,8 +41,8 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <%= link_to admins_backoffice_welcome_index_path, class:"nav-link" do %>
-                    <i class="fas fa-fw fa-file"></i>
-                    <span>Resumo</span></a>
+                    <i class="fas fa-fw fa-columns"></i>
+                    <span>Painel</span></a>
                 <% end %>
                 <%= link_to admins_backoffice_schedule_index_path, class:"nav-link" do %>
                     <i class="fas fa-fw fa-calendar-alt"></i>
@@ -112,6 +112,9 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%= current_admin.full_name %></span>
+                                <div class=" rounded-circle">
+                                    <i class="fas fa-laugh-wink"></i>
+                                </div>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

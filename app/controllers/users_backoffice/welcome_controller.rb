@@ -3,7 +3,7 @@ class UsersBackoffice::WelcomeController < UsersBackofficeController
     before_action :verify_password, only: [:update]
 
     def index
-        @schedule = Schedule.all
+        @schedule = Schedule.all.order(:day)
     end
     def edit
         @user.build_user_profile if @user.user_profile.blank?

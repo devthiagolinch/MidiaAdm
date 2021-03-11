@@ -1,58 +1,82 @@
 <div class="row">
-  <div class="col-lg-6">
-    <!-- Collapsable Card Members -->
-    <div class="card shadow mb-4">
-      <!-- Card Header - Accordion -->
-      <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
-          role="button" aria-expanded="true" aria-controls="collapseCardExample">
-          <h6 class="m-0 font-weight-bold text-primary">Edição de Perfil</h6>
-      </a>
-      <!-- Card Content - Collapse -->
-      <div class="collapse show" id="collapseCardExample">
-          <div class="card-body">
-            <%= form_with(url: users_backoffice_profile_path, model: @user, local: true) do |form| %>
-            <form class="user">
-                <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <%= form.text_field :first_name, class:"form-control form-control-user", placeholder:"Nome..." %>
-                        
-                    </div>
-                    <div class="col-sm-6">
-                        <%= form.text_field :last_name, class:"form-control form-control-user", placeholder:"Sobrenome..." %>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <%= form.text_field :email, class:"form-control form-control-user", placeholder:"E-mail..." %>
-                </div>
-
-                <%= form.fields_for :user_profile do |profile_form| %>
-                    <div class="form-group">
-                        <%= profile_form.text_field :address, class:"form-control form-control-user", placeholder:"Endereço..." %>
-                    </div>
+    <div class="col-lg-6">
+        <!-- Collapsable Card Members -->
+        <div class="card shadow mb-4">
+        <!-- Card Header - Accordion -->
+        <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse"
+            role="button" aria-expanded="true" aria-controls="collapseCardExample">
+            <h6 class="m-0 font-weight-bold text-primary">Edição de Perfil</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse hiden" id="collapseCardExample">
+            <div class="card-body">
+                <%= form_with(url: users_backoffice_profile_path, model: @user, local: true) do |form| %>
+                <form class="user">
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <%= profile_form.text_field :cellphone, class:"form-control form"%>
+                            <%= form.text_field :first_name, class:"form-control form-control-user", placeholder:"Nome..." %>
+                            
                         </div>
                         <div class="col-sm-6">
-                        <%= profile_form.date_field :birthdate, class:"form-control form-control-control"%>
+                            <%= form.text_field :last_name, class:"form-control form-control-user", placeholder:"Sobrenome..." %>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <%= form.text_field :email, class:"form-control form-control-user", placeholder:"E-mail..." %>
+                    </div>
+
+                    <%= form.fields_for :user_profile do |profile_form| %>
+                        <div class="form-group">
+                            <%= profile_form.text_field :address, class:"form-control form-control-user", placeholder:"Endereço..." %>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <%= profile_form.text_field :cellphone, class:"form-control form"%>
+                            </div>
+                            <div class="col-sm-6">
+                            <%= profile_form.date_field :birthdate, class:"form-control form-control-control"%>
+                            </div>
+                        </div>
+                    <% end %>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <%= form.password_field :password, class:"form-control form-control-user", placeholder:"Digite sua senha" %>
+                        </div>
+                        <div class="col-sm-6">
+                            <%= form.password_field :password_confirmation, class:"form-control form-control-user", placeholder:"Confirme sua senha" %>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-user btn-block">
+                        Atualizar
+                    </button>
+                </form>
                 <% end %>
-                <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <%= form.password_field :password, class:"form-control form-control-user", placeholder:"Digite sua senha" %>
-                    </div>
-                    <div class="col-sm-6">
-                        <%= form.password_field :password_confirmation, class:"form-control form-control-user", placeholder:"Confirme sua senha" %>
-                    </div>
-                </div>
-                <button class="btn btn-primary btn-user btn-block">
-                    Atualizar
-                </button>
-            </form>
-            <% end %>
-          </div>
-      </div>
+            </div>
+        </div>
+        </div>
     </div>
+
+    <div class="col-lg-6">
+        <!-- Collapsable Card Members -->
+        <div class="card shadow mb-4">
+          <!-- Basic Card Example -->
+            <% @schedule.each do |schedule| %>
+            <div class="  mb-4">
+                <div class="card-body border-bottom-info">
+                        <strong> <%= l schedule.day %> </strong>
+                    <p>
+                        <h5>Manhã</h5>
+                    <strong>Transmissão</strong> <%= schedule.morning_tranmission %>
+                    <strong>Arquivos</strong> <%= schedule.morning_files %>
+                    <hr>
+                    <h5>Noite</h5>
+                    <strong>Transmissão</strong> <%= schedule.night_transmission %>
+                    <strong>Arquivos</strong> <%= schedule.night_files %>
+                    <strong>Som</strong> <%= schedule.night_sound %>
+                    </p>
+                </div>
+            </div>
+            <% end %>
+        </div>
   </div>
 </div>
