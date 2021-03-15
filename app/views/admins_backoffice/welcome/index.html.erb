@@ -16,14 +16,18 @@
                 <thead>
                   <tr>
                     <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Aniversario</th>
                     <th>E-mail</th>
                   </tr>
                 </thead>
                 <tbody>
-                <% @users.each do |user| %>
+                <% @profile.each do |user_profile| %>
                   <tr>
-                    <td><%= user.first_name %></td>
-                    <td><%= user.email %></td>
+                    <td><%= user_profile.user.first_name %></td>
+                    <td><%= user_profile.cellphone %></td>
+                    <td><%= l user_profile.birthdate %></td>
+                    <td><%= user_profile.user.email %></td>
                   </tr>
                 <% end %>
                 </tbody>

@@ -1,6 +1,6 @@
 class AdminsBackoffice::WelcomeController < AdminsBackofficeController
   def index
-    @users = User.includes(:user_profile).all
+    @profile = UserProfile.all
     @schedule = Schedule.all.order(:day)
   end
 end

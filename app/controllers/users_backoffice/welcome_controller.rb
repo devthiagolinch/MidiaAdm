@@ -1,5 +1,5 @@
 class UsersBackoffice::WelcomeController < UsersBackofficeController
-  before_action :set_user
+    before_action :set_user
     before_action :verify_password, only: [:update]
 
     def index
