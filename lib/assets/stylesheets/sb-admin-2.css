@@ -10823,8 +10823,14 @@ a:focus {
   }
 }
 
-.bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+.bg-login-image-user {
+  background: url("https://unsplash.com/photos/Im7lZjxeLhg/download?force=true&w=1920");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-login-image-adm {
+  background: url("https://unsplash.com/photos/73OZYNjVoNI/download?force=true&w=1920");
   background-position: center;
   background-size: cover;
 }
