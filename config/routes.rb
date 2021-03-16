@@ -9,12 +9,13 @@ Rails.application.routes.draw do
     patch 'profile', to: 'profile#update'
   end
   namespace :admins_backoffice do
-    get 'welcome/index'
+    get  'welcome/index'
     get 'users_profile/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
 
     resources :schedule
+    resources :cash_entrance
   end
   devise_for :users
   devise_for :admins
