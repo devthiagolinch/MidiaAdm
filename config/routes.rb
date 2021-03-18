@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     patch 'profile', to: 'profile#update'
 
     resources :schedule
-    resources :cash_entrance
+    resources :entrance
   end
   devise_for :users
   devise_for :admins

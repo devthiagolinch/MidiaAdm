@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CashEntranceTest < ActiveSupport::TestCase
+class EntranceTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

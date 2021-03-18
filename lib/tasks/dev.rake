@@ -11,7 +11,7 @@ namespace :dev do
       show_spinner("Cadastrando o usuário padrão...") { %x(rails dev:add_default_user) }
       show_spinner("Cadastrando ooutros usuários...") { %x(rails dev:add_others_users) }
       show_spinner("Cadastrando Escala padrão...") { %x(rails dev:add_schedule) }
-      # show_spinner("Cadastrando questões padrões...") { %x(rails dev:add_answers_and_questions) }
+      show_spinner("Cria entrada financeira...") { %x(rails dev:add_cash_entrance) }
     else
       puts "Você não está em ambiente de desenvolvimento!"
     end
@@ -67,6 +67,18 @@ namespace :dev do
         night_transmission: Faker::Name.name,
         night_files: Faker::Name.name,
         night_sound: Faker::Name.name,
+      )
+    end
+  end
+
+  desc "Cria entrada fincaneira"
+  task add_cash_entrance: :environment do
+    4.times do |i|
+      Entrance.create!(
+        date_of_entrance: Faker::Date.between(from: '2021-03-01', to: '2021-03-25'),
+        description: Faker::Name.name,
+        type_of_entrance: Faker::Types.rb_string,
+        value: Faker::Number.number(digits: 4),
       )
     end
   end

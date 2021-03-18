@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_135126) do
+ActiveRecord::Schema.define(version: 2021_03_18_131652) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2021_03_16_135126) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_id"], name: "index_cash_entrances_on_admin_id"
+  end
+
+  create_table "entrances", force: :cascade do |t|
+    t.string "description"
+    t.string "type_of_entrance"
+    t.integer "value"
+    t.date "date_of_entrance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|

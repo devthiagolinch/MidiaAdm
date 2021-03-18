@@ -2,14 +2,12 @@
 
 one:
   description: MyString
-  type: 
+  type_of_entrance: MyString
   value: 1
-  date_entrance: 2021-03-16
-  admin: one
+  date_of_entrance: 2021-03-18
 
 two:
   description: MyString
-  type: 
+  type_of_entrance: MyString
   value: 1
-  date_entrance: 2021-03-16
-  admin: two
+  date_of_entrance: 2021-03-18
