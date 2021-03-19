@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :admins_backoffice do
+    get 'finance_resume/index'
+  end
+  namespace :admins_backoffice do
     get 'schedules/index'
 
     resources :schedules

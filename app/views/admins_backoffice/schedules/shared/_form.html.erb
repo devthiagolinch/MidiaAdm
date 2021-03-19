@@ -1,38 +1,41 @@
 <!-- Basic Card Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Editando Escala</h6>
+        <h6 class="m-0 font-weight-bold text-primary"><%= "#{action_message} Escala" %></h6>
     </div>
     <div class="card-body">
         <%= form_with(model: [:admins_backoffice, @schedule], local: true) do |form| %>
             <div class="form-group">
-            <%= form.label :day %>
-            <%= form.date_field :day ,class:"form-control form-control-user", placeholder:"Nome" %>
+                <%= form.label :day %>
+                <%= form.date_field :day ,class:"form-control form-control-user", placeholder:"Nome" %>
             </div>
-
-            <div class="form-group">
-            <%= form.label :morning_tranmission %>
-            <%= form.text_field :morning_tranmission ,class:"form-control form-control-user", placeholder:"exemplo@exemplo.com" %>
+            <h2>Manhã</h2>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <%= form.text_field :morning_tranmission ,class:"form-control form-control-user", placeholder:"Transmissão" %>
+                    
+                </div>
+                <div class="col-sm-6">
+                    <%= form.text_field :morning_files ,class:"form-control form-control-user", placeholder:"PC Arquivos" %>
+                </div>
             </div>
-
-            <div class="form-group">
-            <%= form.label :morning_files %>
-            <%= form.text_field :morning_files ,class:"form-control form-control-user", placeholder:"67 99999-9999" %>
-            </div>
-
+            <br>
+            <hr>
+            <br>
+            <h2>Noite</h2>
             <div class="form-group">
             <%= form.label :night_transmission %>
-            <%= form.text_field :night_transmission ,class:"form-control form-control-user"%>
+            <%= form.text_field :night_transmission ,class:"form-control form-control-user", placeholder:"Transmissão" %>
             </div>
 
             <div class="form-group">
             <%= form.label :night_files %>
-            <%= form.text_field :night_files ,class:"form-control form-control-user" %>
+            <%= form.text_field :night_files ,class:"form-control form-control-user", placeholder:"PC Arquivos" %>
             </div>
 
             <div class="form-group">
             <%= form.label :night_sound %>
-            <%= form.text_field :night_sound ,class:"form-control form-control-user", placeholder:"Rua: Afonso Pena, 1200" %>
+            <%= form.text_field :night_sound ,class:"form-control form-control-user", placeholder:"Som" %>
             </div>
 
             <button type="submit" class="btn btn-primary btn-user btn-block">Salvar</button>

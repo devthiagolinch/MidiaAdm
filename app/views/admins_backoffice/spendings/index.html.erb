@@ -12,23 +12,23 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>description</th>
-                        <th>Value</th>
-                        <th>Date</th>
-                        <th>Salary</th>
+                        <th>Saida</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                 <% @spendings.each do |spending| %>
                     <tr>
                     <td><%= spending.description %></td>
-                    <td><%= spending.value %></td>
-                    <td><%= spending.date %></td>
+                    <td>R$ <%= spending.value %></td>
+                    <td><%= l spending.date %></td>
                     <td>
                         <%= link_to  edit_admins_backoffice_spending_path(spending) do %>
                             <i class="fa fa-edit"></i>
                         <% end %>
-                         <%= link_to 'delete', admins_backoffice_spending_path(spending), method: :delete %>
+                         <%= link_to 'delete', admins_backoffice_spending_path(spending), method: :delete, data: {confirm: "Deseja excluír?"} %>
                     </td>
                     </tr>
                 <% end %>

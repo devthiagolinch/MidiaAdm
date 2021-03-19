@@ -30,7 +30,7 @@
                         <%= link_to  edit_admins_backoffice_entrance_path(entrance) do %>
                             <i class="fa fa-edit"></i>
                         <% end %>
-                         <%= link_to 'delete', admins_backoffice_entrance_path(entrance), method: :delete %>
+                         <%= link_to 'delete', admins_backoffice_entrance_path(entrance), method: :delete, data: {confirm: "Deseja excluír?"} %>
                     </td>
                     </tr>
                 <% end %>

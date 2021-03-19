@@ -1,7 +1,7 @@
 class AdminsBackoffice::SpendingsController < AdminsBackofficeController
   before_action :set_spending, only: [:edit, :update, :destroy]
   def index
-    @spendings = Spending.all
+    @spendings = Spending.all.order(:last)
   end
 
   def new

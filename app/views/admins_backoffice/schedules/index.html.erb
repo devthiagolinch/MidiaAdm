@@ -2,15 +2,14 @@
     <% @schedules.each do |sc| %>
     <div class="col-sm-4">
         <!-- Basic Card Example -->
-          <div class="card shadow mb-4">
+          <div class="card border-bottom-info shadow mb-4">
               <div class="card-header py-3">
                 <%= link_to edit_admins_backoffice_schedule_path(sc) do %>
                   <%= l sc.day %>
                 <% end %>
-                <!--<%= link_to admins_backoffice_schedule_path(sc), method: :delete,
-                data: {confirm: 'messages.confirm_with'} do %>
-                  <i class="fas fa-trash"></i>
-                <% end %> -->
+                <%= link_to edit_admins_backoffice_schedule_path(sc) do %>
+                  <i class="fas fa-edit"></i>
+                <% end %>
               </div>
               <div class="card-body">
                   <h4>Manhã</h4>
