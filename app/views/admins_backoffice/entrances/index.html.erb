@@ -1,0 +1,41 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Entrada</h1>
+<p class="mb-4">Contabilizando as entradas financeiras da MidiaTech.</p> 
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"><%= link_to 'new entrance', new_admins_backoffice_entrance_path %></h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>description</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Value</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% @entrances.each do |entrance| %>
+                    <tr>
+                    <td><%= entrance.description %></td>
+                    <td><%= entrance.type_of_entrance %></td>
+                    <td><%= l entrance.date_of_entrance %></td>
+                    <td><%= entrance.value %></td>
+                    <td>
+                        <%= link_to  edit_admins_backoffice_entrance_path(entrance) do %>
+                            <i class="fa fa-edit"></i>
+                        <% end %>
+                         <%= link_to 'delete', admins_backoffice_entrance_path(entrance), method: :delete %>
+                    </td>
+                    </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

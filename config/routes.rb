@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  namespace :admins_backoffice do
+    get 'schedules/index'
+
+    resources :schedules
+  end
+  namespace :admins_backoffice do
+    get 'spendings/index'
+    resources :spendings
+  end
+  namespace :admins_backoffice do
+    get 'entrances/index'
+
+    resources :entrances
+  end
   namespace :site do
     get 'welcome/index'
   end
@@ -10,12 +24,12 @@ Rails.application.routes.draw do
   end
   namespace :admins_backoffice do
     get  'welcome/index'
-    get 'users_profile/index'
+    get 'schedule/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
 
     resources :schedule
-    resources :entrance
+    resources :subject
   end
   devise_for :users
   devise_for :admins

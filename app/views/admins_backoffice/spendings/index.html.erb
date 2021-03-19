@@ -1,36 +1,34 @@
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Entrada</h1>
+<h1 class="h3 mb-2 text-gray-800">Gastos</h1>
 <p class="mb-4">Contabilizando as entradas financeiras da MidiaTech.</p> 
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"><%= link_to 'new spent', new_admins_backoffice_spending_path %></h6>
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>description</th>
-                        <th>Type</th>
-                        <th>Date</th>
                         <th>Value</th>
+                        <th>Date</th>
                         <th>Salary</th>
                     </tr>
                 </thead>
                 <tbody>
-                <% @entrances.each do |cash_entrance| %>
+                <% @spendings.each do |spending| %>
                     <tr>
-                    <td><%= cash_entrance.description %></td>
-                    <td><%= cash_entrance.type_of_entrance %></td>
-                    <td><%= l cash_entrance.date_of_entrance %></td>
-                    <td><%= cash_entrance.value %></td>
+                    <td><%= spending.description %></td>
+                    <td><%= spending.value %></td>
+                    <td><%= spending.date %></td>
                     <td>
-                        <%= link_to  edit_admins_backoffice_entrance_path(cash_entrance) do %>
+                        <%= link_to  edit_admins_backoffice_spending_path(spending) do %>
                             <i class="fa fa-edit"></i>
                         <% end %>
-                        <%= link_to admins_backoffice_entrance_path(cash_entrance), method: :delete,
-                        data: {confirm: 'Tem certeza?'} do %>
-                            <i class="fas fa-trash-alt"></i>
-                        <% end %>
+                         <%= link_to 'delete', admins_backoffice_spending_path(spending), method: :delete %>
                     </td>
                     </tr>
                 <% end %>

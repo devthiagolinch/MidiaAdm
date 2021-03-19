@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <div>
+                <div>
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">New Entrnace!</h1>
+                        </div>
+                        <%= form_with(model: [ :admins_backoffice, @entrance ], local: true) do |form| %>
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <%= form.text_field :description, class:"form-control form-control-user",
+                                    placeholder: 'Titulo da entrada' %>
+                                </div>
+                                <div class="col-sm-6">
+                                    <%= form.text_field :type_of_entrance, class:"form-control form-control-user",
+                                    placeholder: 'Tipo de entranda' %>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <%= form.text_field :value, class:"form-control form-control-user",
+                                placeholder: 'Valor da entrada' %>
+                                </div>
+                                <div class="col-sm-6">
+                                   <%= form.date_field :date_of_entrance, class:"form-control form-control-user" %>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-user btn-block">
+                                Atualizar
+                            </button>
+                        </form>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
