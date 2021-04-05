@@ -3,7 +3,7 @@ class CreateEntrances < ActiveRecord::Migration[5.2]
     create_table :entrances do |t|
       t.string :description
       t.string :type_of_entrance
-      t.integer :value
+      t.float :value
       t.date :date_of_entrance
 
       t.timestamps

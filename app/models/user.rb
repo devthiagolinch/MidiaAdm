@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  after_create :set_statistic
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,4 +15,9 @@ class User < ApplicationRecord
     [self.first_name, self.last_name].join(' ')
   end
 
+  private
+
+  def set_statistic
+    AdminStatistic.set_event(AdminStatistic::EVENTS[:total_users])
+  end
 end

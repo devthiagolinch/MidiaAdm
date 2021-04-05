@@ -26,7 +26,7 @@ namespace :dev do
     )
   end
 
-  desc "Adiciona outros users"
+  desc "Adiciona usuario padrao"
   task add_default_user: :environment do
     User.create!(
       email: "user@user.com",
@@ -46,7 +46,7 @@ namespace :dev do
     end
   end
 
-  desc "Adiciona o usuário padrão"
+  desc "Adiciona o outros usuarios"
   task add_others_users: :environment do
     10.times do |i|
       User.create!(
@@ -57,7 +57,7 @@ namespace :dev do
     end
   end
 
-  desc "Adiciona o administrador padrão"
+  desc "Adiciona outros adm"
   task add_schedule: :environment do
     4.times do |i|
       Schedule.create!(
