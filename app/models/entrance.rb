@@ -7,7 +7,7 @@ class Entrance < ApplicationRecord
 
     # Soma totos os valores dos gastos independente do mes
     def self.total
-        self.group_by_month(:created_at).sum(:value)
+        self.sum(:value)
     end
 
 end

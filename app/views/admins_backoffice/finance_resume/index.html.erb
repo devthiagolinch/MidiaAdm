@@ -8,7 +8,7 @@
                   <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                           Última entrada</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ <%= entrance.value %></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ <%= @sum_of_entrances %></div>
                   </div>
                   <div class="col-auto">
                       <i class="fas fa-plus fa-2x text-gray-300"></i>
@@ -26,7 +26,9 @@
                   <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
                           Gastos (mensais)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ <%= @sum_of_spendings.values %></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$
+                        <%= @sum_of_spendings %>
+                      </div>
                   </div>
                   <div class="col-auto">
                       <i class="fas fa-minus fa-2x text-gray-300"></i>
@@ -44,7 +46,7 @@
                   <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                           Saldo Atual</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ <%=  %></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ <%= @current_balance %></div>
                   </div>
                   <div class="col-auto">
                       <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>

@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2021_04_05_121826) do
 
   create_table "spendings", force: :cascade do |t|
     t.string "description"
-    t.integer "value"
+    t.float "value"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
