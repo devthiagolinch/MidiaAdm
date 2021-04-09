@@ -1,7 +1,7 @@
 class AdminsBackoffice::EntrancesController < AdminsBackofficeController
   before_action :set_entrance, only: [:edit, :update, :destroy]
   def index
-    @entrances = Entrance.all.order(:description)
+    @entrances = Entrance.last_entrance
   end
   
   def new
