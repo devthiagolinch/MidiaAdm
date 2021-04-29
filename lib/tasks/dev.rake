@@ -13,7 +13,8 @@ namespace :dev do
       show_spinner("Cadastrando ooutros usuários...") { %x(rails dev:add_others_users) }
       show_spinner("Cadastrando Escala padrão...") { %x(rails dev:add_schedule) }
       show_spinner("Cria entrada financeira...") { %x(rails dev:add_cash_entrance) }
-
+  end
+  
   desc "Adiciona outros adms"
   task add_default_admin: :environment do
     Admin.create!(
