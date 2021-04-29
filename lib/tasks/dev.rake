@@ -6,16 +6,13 @@ namespace :dev do
       show_spinner("Apagando BD...") { %x(rails db:drop) }
       show_spinner("Criando BD...") { %x(rails db:create) }
       show_spinner("Migrando BD...") { %x(rails db:migrate) }
+    end
       show_spinner("Cadastrando o administrador padrão...") { %x(rails dev:add_default_admin) }
       show_spinner("Cadastrando outros administradores...") { %x(rails dev:add_others_admins) }
       show_spinner("Cadastrando o usuário padrão...") { %x(rails dev:add_default_user) }
       show_spinner("Cadastrando ooutros usuários...") { %x(rails dev:add_others_users) }
       show_spinner("Cadastrando Escala padrão...") { %x(rails dev:add_schedule) }
       show_spinner("Cria entrada financeira...") { %x(rails dev:add_cash_entrance) }
-    else
-      puts "Você não está em ambiente de desenvolvimento!"
-    end
-  end
 
   desc "Adiciona outros adms"
   task add_default_admin: :environment do

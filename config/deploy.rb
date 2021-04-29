@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, "midiaADM"
+set :application, "groupmanagechurc"
 set :repo_url, "https://github.com/devthiagolinch/MidiaAdm.git"
 
 # Default branch is :master
@@ -9,7 +9,7 @@ set :repo_url, "https://github.com/devthiagolinch/MidiaAdm.git"
 set :branch, 'main'
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/midiaADM"
+set :deploy_to, "/var/www/groupmanagechurc"
 
 # Default value for :format is :airbrussh.
 set :format, :airbrussh
