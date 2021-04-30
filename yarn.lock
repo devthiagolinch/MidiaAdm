@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@fortawesome/fontawesome-free@5.15.1":
-  version "5.15.1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
-  integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
-
 bootstrap@4.5.3:
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.3.tgz#c6a72b355aaf323920be800246a6e4ef30997fe6"
@@ -67,6 +62,16 @@ datatables.net@1.10.22:
   dependencies:
     jquery ">=1.7"
 
+fastclick@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/fastclick/-/fastclick-1.0.6.tgz#161625b27b1a5806405936bda9a2c1926d06be6a"
+  integrity sha1-FhYlsnsaWAZAWTa9qaLBkm0Gvmo=
+
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+
 jquery.easing@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jquery.easing/-/jquery.easing-1.4.1.tgz#47982c5836bd758fd48494923c4a101ef6e93e3b"
@@ -81,6 +86,11 @@ jquery@>=1.7:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
+
+metismenu@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/metismenu/-/metismenu-3.0.6.tgz#595ead90ccb88037ef8af5e5316598a3c57b7e54"
+  integrity sha512-aO2XoKWMLNGAw3skRPWcAhZUtootPhEk6Lz5Jamc9RlulhThp4h09AoeXevhg4vVQvwQjl8UenN09Wnr2QeM5w==
 
 moment@^2.10.2:
   version "2.29.1"

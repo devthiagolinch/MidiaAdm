@@ -13,6 +13,6 @@
  *= require_tree .
  *= require_self
  *= require datatables.net-bs4/css/dataTables.bootstrap4
- *= require @fortawesome/fontawesome-free/css/all
+*= require font-awesome
  *= require sb-admin-2
  */
