@@ -37,5 +37,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'admin', to: 'admins_backoffice/welcome#index'
+  
   root to: "users_backoffice/welcome#index"
 end
