@@ -43,7 +43,7 @@ gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'groupdate'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 
 group :development, :test do
