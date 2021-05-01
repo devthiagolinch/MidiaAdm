@@ -12,6 +12,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Allow Web Console from Vagrant
+config.web_console.whitelisted_ips = '10.0.2.2'
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
