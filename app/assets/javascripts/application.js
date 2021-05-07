@@ -16,6 +16,7 @@
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap.bundle
 //= require jquery.easing/jquery.easing
+//= require @fortawesome/fontawesome-free/js/all.js
 //= require datatables.net-bs4/js/dataTables.bootstrap4
 //= require datatables.net/js/jquery.dataTables
 //= require sb-admin-2
