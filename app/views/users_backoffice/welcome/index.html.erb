@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-lg-4">
+<% @schedule.each do |schedule| %>
+    <div class="col-lg-3">
         <!-- Collapsable Card Members -->
         <div class="card">
           <!-- Basic Card Example -->
-            <% @schedule.each do |schedule| %>
-            <div class="  mb-4">
+            <div class="mb-3">
                 <div class="card-body border-bottom-info">
                         <strong> <%= l schedule.day %> </strong>
                     <p>
@@ -19,7 +19,7 @@
                     </p>
                 </div>
             </div>
-            <% end %>
         </div>
   </div>
+<% end %>
 </div>

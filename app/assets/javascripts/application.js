@@ -14,6 +14,7 @@
 //= require activestorage
 //= require_tree .
 //= require jquery/dist/jquery
+//= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.bundle
 //= require jquery.easing/jquery.easing
 //= require @fortawesome/fontawesome-free/js/all.js
