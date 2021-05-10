@@ -20,17 +20,19 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
   namespace :users_backoffice do
-    get 'user_profile/index'
     get 'welcome/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
   end
+
   namespace :admins_backoffice do
     get  'welcome/index'
     get 'schedule/index'
+    get 'spendings/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
 
+    resources :spendings
     resources :schedule
     resources :subject
   end
