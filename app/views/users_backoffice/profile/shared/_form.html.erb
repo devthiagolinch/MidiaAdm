@@ -28,13 +28,16 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <%= profile_form.text_field :cellphone, class:"form-control form"%>
+                                        <%= profile_form.text_field :cellphone, class:"form-control form", placeholder:"Celular"%>
                                     </div>
                                     <div class="col-sm-6">
-                                    <%= profile_form.date_field :birthdate, class:"form-control form-control-control"%>
+                                    <%= profile_form.date_field :birthdate, 
+                                        value: (@user.user_profile.birthdate unless @user.user_profile.birthdate.blank?),
+                                        class:"form-control col-md-7 col-xs-12 datepicker"%>
                                     </div>
                                 </div>
                             <% end %>
+                            
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <%= form.password_field :password, class:"form-control form-control-user", placeholder:"Digite sua senha" %>

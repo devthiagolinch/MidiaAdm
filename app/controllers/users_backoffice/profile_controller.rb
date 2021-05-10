@@ -1,6 +1,6 @@
 class UsersBackoffice::ProfileController < UsersBackofficeController
+    before_action :verify_password, only: [:update,:edit]
     before_action :set_user
-    before_action :verify_password, only: [:update]
 
     def edit
         @user.build_user_profile if @user.user_profile.blank?
@@ -9,10 +9,11 @@ class UsersBackoffice::ProfileController < UsersBackofficeController
     def update
         if @user.update(params_user)
             bypass_sign_in(@user) # no update
-            redirect_to users_backoffice_welcome_index_path	, notice: "Usuário
-            atualizado com sucesso!"
+            unless params_user[:user_profile_attributes]
+                redirect_to users_backoffice_welcome_index_path, notice: "Usuário atualizado com sucesso!"
+            end
         else
-            render :index
+            render :edit
         end
     end
 
@@ -28,9 +29,8 @@ class UsersBackoffice::ProfileController < UsersBackofficeController
     end
         
     def verify_password
-        if params[:user][:password].blank? &&
-        params[:user][:password_confirmation].blank?
-        params[:user].extract!(:password, :password_confirmation)
+        if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+          params[:user].extract!(:password, :password_confirmation)
         end
     end
 end
