@@ -15,5 +15,11 @@ module MidiaAdm
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.generators.system_tests = nil
+
+
+    # Glyphicons fix
+    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'fonts')
   end
 end
