@@ -13,12 +13,15 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # /app/assets
 Rails.application.config.assets.precompile += %w(   admins_backoffice.js admins_backoffice.css
-                                                    users_backoffice.js users_backoffice.css)
+                                                    users_backoffice.js users_backoffice.css
+                                                    application.js application.css
+                                                )
 
 # /lib/assets
 Rails.application.config.assets.precompile += %w(   sb-admin-2.js sb-admin-2.css
                                                     custom.js custom.css
-                                                    user_devise.css user_devise.js )
+                                                    user_devise.css user_devise.js
+                                                )
 
 # /vendor/assets
 Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery.js )

@@ -42,7 +42,7 @@
             <li class="nav-item active">
                 <%= link_to users_backoffice_welcome_index_path, class:"nav-link" do %>
                     <i class="fas fa-fw fa-columns"></i>
-                    <span>Resumo</span>
+                    <span>Início</span>
                 <% end %>
             </li>
             <!-- Divider -->
@@ -51,7 +51,7 @@
             <li class="nav-item active">
                 <%= link_to users_backoffice_profile_path, class:"nav-link" do %>
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Profile
+                        Perfil
                 <% end %>
             </li>
 
@@ -195,9 +195,9 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Deseja realmente fazer Logout?.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                     <%= link_to "Logout", destroy_user_session_path, method: :delete,class:"btn btn-primary" %>
                 </div>
             </div>
