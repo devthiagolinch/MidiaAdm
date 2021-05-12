@@ -15,6 +15,7 @@
 //= require_tree .
 //= require jquery/dist/jquery
 //= require popper.js/dist/popper
+//= require bootstrap/dist/js/bootstrap
 //= require bootstrap/dist/js/bootstrap.bundle
 //= require jquery.easing/jquery.easing
 //= require chart.js/dist/Chart.min
