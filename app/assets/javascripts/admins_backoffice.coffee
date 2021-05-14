@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-//= require jquery/dist/jquery
+//= require jquery/dist/jquery.js
 //= require datatables.net/js/jquery.dataTables
 //= require jquery.easing/jquery.easing
 //= require popper.js/dist/popper
