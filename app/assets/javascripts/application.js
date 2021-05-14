@@ -14,7 +14,7 @@
 //= require activestorage
 //= require_tree .
 //= require jquery/dist/jquery.js
-//= require jquery.easing/jquery.easing
+//= require jquery.easing/jquery.easing.js
 //= require datatables.net/js/jquery.dataTables
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap

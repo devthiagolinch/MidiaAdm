@@ -4,7 +4,7 @@
 
 //= require jquery/dist/jquery.js
 //= require datatables.net/js/jquery.dataTables
-//= require jquery.easing/jquery.easing
+//= require jquery.easing/jquery.easing.js
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap
 //= require bootstrap/dist/js/bootstrap.bundle
