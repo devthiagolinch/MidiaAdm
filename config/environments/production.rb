@@ -7,7 +7,11 @@ Rails.application.configure do
   # Mailgun Config
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
-  api_key: Rails.application.credentials.MAILGUN_KEY, domain: 'mg.midiaipba.com.br' }
+    api_key: 'e058d8ace9e88099adab44e4fc0bbc68-602cc1bf-59b63d4d',
+    domain: 'mg.midiaipba.com.br',
+    # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  }
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

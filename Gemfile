@@ -44,6 +44,7 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'groupdate'
 gem 'font-awesome-rails'
+gem 'prawn-rails'
 
 
 group :development, :test do
@@ -78,7 +79,7 @@ end
 group :production do
   gem 'mysql2'
   gem "unicorn"
-  gem 'mailgun-ruby', '~>1.2.4'
+  gem 'mailgun-ruby'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
