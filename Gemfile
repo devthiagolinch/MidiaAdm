@@ -79,7 +79,6 @@ end
 group :production do
   gem 'mysql2'
   gem "unicorn"
-  gem 'mailgun-ruby'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
